@@ -46,7 +46,7 @@ This is the Cart Page,proceed to review your items and place order
             {% for cart_item in cart_items %}
             <tr>
                 <td>
-                    <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.image.url}}" alt="" class="float-left rounded custom_image" style="height:100px;width:80px;"></a>
+                    <a href="{% url 'shop:allProdCat' %}"><img src="{{cart_item.product.image.url}}" alt="" class="float-left rounded custom_image" style="height:100px;width:80px;"></a>
 
                 </td>
                 <td class="text-left">
@@ -107,7 +107,10 @@ This is the Cart Page,proceed to review your items and place order
     </table>
     <div class="mx-auto">
         <a href="{% url 'shop:allProdCat' %}" class="btn btn-secondary btn-block my_custom_button">Continue shopping</a>
-</div>
+    </div>
+    <div class="mx-auto">
+        <a href="{% url 'shop:allProdCat' %}" class="btn btn-secondary btn-block my_custom_button">Make Payment</a>
+    </div>
     {% endif %}
 </div>
 </div>
